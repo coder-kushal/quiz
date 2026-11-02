@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="initial">
+            <h1>QUIZ</h1>
+            <p>You will be given 1-50 number of quiz questions of selected category with 4 options each. You need to choose
+                the correct
+                option. You can choose the difficulty level as your choice. Take as long time as you want!</p>
+            <form>
+                <div class="input">
+                    No. of Questions: <input type="number" placeholder="1-50" min="1" max="50" value="10">
+                </div>
+                <div class="selectCategory">
+                    Choose Category: <select id="category">
+                        <option value="any">Any Category</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="13">Entertainment: Musicals &amp; Theatres</option>
+                        <option value="14">Entertainment: Television</option>
+                        <option value="15">Entertainment: Video Games</option>
+                        <option value="16">Entertainment: Board Games</option>
+                        <option value="17">Science &amp; Nature</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="19">Science: Mathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="24">Politics</option>
+                        <option value="25">Art</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                        <option value="29">Entertainment: Comics</option>
+                        <option value="30">Science: Gadgets</option>
+                        <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+                        <option value="32">Entertainment: Cartoon &amp; Animations</option>
+                    </select>
+                </div>
+                <div class="selectDifficulty">
+                    Choose Difficulty: <select id="difficulty">
+                        <option value="any">Any</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <button id="start" type="submit">Start</button>
+            </form>
+        </div>
+        <div class="quesCont hidden">
+            <div id="question"></div>
+            <div class="answers">
+                <div id="option1" class="option">A. Earth</div>
+                <div id="option2" class="option">B. Venus</div>
+                <div id="option3" class="option">C. Mars</div>
+                <div id="option4" class="option">D. Mercury</div>
+            </div>
+            <div class="buttons">
+                <button class="quit">Quit</button>
+                <button class="next">Next</button>
+            </div>
+        </div>
+        <div class="result hidden">
+            <p id="finalResult"></p>
+            <button id="seeAnswers">See Answers</button>
+        </div>
+        <div class="correctAnswers hidden"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
